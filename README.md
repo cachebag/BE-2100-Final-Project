@@ -3,7 +3,7 @@
 ### Install requirements for the project
 Run this command (pip3 for MacOS):
 ```bash
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 
 ### Download the dataset by running this file
