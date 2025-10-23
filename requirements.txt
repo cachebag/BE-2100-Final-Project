@@ -1,2 +1,10 @@
-kagglehub
+numpy
 opencv-python
+matplotlib
+scikit-learn
+scipy
+kagglehub
+torch
+pandas
+seaborn
+tqdm
