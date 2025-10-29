@@ -10,7 +10,27 @@ import os
 # Load the preprocessed numpy files from data/ folder
 # Flatten the images and return X_train, y_train, X_val, y_val, X_test, y_test
 def load_data():
-    pass
+
+    data_path = os.path.join("src", "data")
+
+    X_train = np.load(os.path.join(data_path, "X_train.npy"))
+    y_train = np.load(os.path.join(data_path, "y_train.npy"))
+    X_val = np.load(os.path.join(data_path, "X_val.npy"))
+    y_val = np.load(os.path.join(data_path, "y_val.npy"))
+    X_test = np.load(os.path.join(data_path, "X_test.npy"))
+    y_test = np.load(os.path.join(data_path, "y_test.npy"))
+
+    X_train = X_train.reshape(X_train.shape[0], -1)
+    X_val = X_val.reshape(X_val.shape[0], -1)
+    X_test = X_test.reshape(X_test.shape[0], -1)
+
+    print("Data loaded and flattened successfully")
+    print(f"X_train: {X_train.shape}, y_train: {y_train.shape}")
+    print(f"X_val: {X_val.shape}, y_val: {y_val.shape}")
+    print(f"X_test: {X_test.shape}, y_test: {y_test.shape}")
+
+    return X_train, y_train, X_val, y_val, X_test, y_test
+
 
 # ASSIGNED TO: Abdoul
 # Train 3 models (Logistic Regression, Random Forest, SVM)
