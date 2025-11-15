@@ -106,7 +106,20 @@ def save_best_model(results):
     with open(model_path, 'wb') as f:
         pickle.dump(best_model, f)
     
+    # Save training results summary
+    training_summary = {
+        'best_model_name': best_name,
+        'best_val_accuracy': best_val_acc,
+        'all_results': {name: {'train_acc': data['train_acc'], 'val_acc': data['val_acc']} 
+                       for name, data in results.items()}
+    }
+    
+    summary_path = os.path.join(models_dir, "training_summary.pkl")
+    with open(summary_path, 'wb') as f:
+        pickle.dump(training_summary, f)
+    
     print(f"Best model saved to {model_path}")
+    print(f"Training summary saved to {summary_path}")
     
     return best_name, best_model
 

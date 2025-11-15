@@ -1,0 +1,65 @@
+{
+  "evaluation_date": "2025-11-14 19:06:09",
+  "model_info": {
+    "best_model": "RandomForest",
+    "best_val_accuracy": 0.9683496608892238
+  },
+  "training_metrics": {
+    "accuracy": 1.0
+  },
+  "validation_metrics": {
+    "accuracy": 0.9683496608892238
+  },
+  "test_metrics": {
+    "accuracy": 0.972027972027972,
+    "roc_auc": 0.9973459380213336,
+    "pr_auc": 0.9985160074332055,
+    "confusion_matrix": {
+      "true_negatives": 255,
+      "false_positives": 7,
+      "false_negatives": 13,
+      "true_positives": 440
+    },
+    "classification_report": {
+      "OK": {
+        "precision": 0.9514925373134329,
+        "recall": 0.9732824427480916,
+        "f1-score": 0.9622641509433962,
+        "support": 262.0
+      },
+      "Defective": {
+        "precision": 0.9843400447427293,
+        "recall": 0.9713024282560706,
+        "f1-score": 0.9777777777777777,
+        "support": 453.0
+      },
+      "accuracy": 0.972027972027972,
+      "macro avg": {
+        "precision": 0.9679162910280811,
+        "recall": 0.9722924355020811,
+        "f1-score": 0.970020964360587,
+        "support": 715.0
+      },
+      "weighted avg": {
+        "precision": 0.9723036154469591,
+        "recall": 0.972027972027972,
+        "f1-score": 0.9720930641685358,
+        "support": 715.0
+      }
+    }
+  },
+  "all_model_results": {
+    "LogisticRegression": {
+      "train_acc": 0.9935921598190728,
+      "val_acc": 0.881688018085908
+    },
+    "RandomForest": {
+      "train_acc": 1.0,
+      "val_acc": 0.9683496608892238
+    },
+    "SVM": {
+      "train_acc": 0.9700339238597814,
+      "val_acc": 0.9615674453654861
+    }
+  }
+}
